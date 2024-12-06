@@ -26,7 +26,7 @@ export default (
     // the source file. Using a separate source map file does not work.
     devtool: "eval-source-map",
     externals: {
-      "@foxglove/extension": "@foxglove/extension",
+      "@lichtblick/suite": "@lichtblick/suite",
     },
     resolve: {
       extensions: [".js", ".ts", ".jsx", ".tsx"],

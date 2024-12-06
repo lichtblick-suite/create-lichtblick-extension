@@ -4,7 +4,7 @@ import {
   PanelExtensionContext,
   Topic,
   SettingsTreeAction,
-} from "@foxglove/extension";
+} from "@lichtblick/suite";
 import ReactJson, { ThemeKeys } from "@microlink/react-json-view";
 import { produce } from "immer";
 import { set } from "lodash";

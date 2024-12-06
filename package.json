@@ -1,12 +1,12 @@
 {
   "name": "create-lichtblick-extension",
   "displayName": "Create Lichtblick Extension",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "publisher": "Lichtblick",
   "description": "Create and package Lichtblick extensions",
   "license": "MIT",
   "keywords": [
-    "foxglove",
+    "lichtblick",
     "robotics",
     "ros",
     "visualization"
@@ -18,8 +18,8 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "bin": {
-    "create-foxglove-extension": "dist/bin/create-foxglove-extension.js",
-    "foxglove-extension": "dist/bin/foxglove-extension.js"
+    "create-lichtblick-extension": "dist/bin/create-lichtblick-extension.js",
+    "lichtblick-extension": "dist/bin/lichtblick-extension.js"
   },
   "files": [
     "dist",
@@ -40,8 +40,8 @@
     "node": ">= 14"
   },
   "devDependencies": {
-    "@foxglove/eslint-plugin": "2.0.0",
-    "@foxglove/tsconfig": "2.0.0",
+    "@lichtblick/eslint-plugin": "1.0.1",
+    "@lichtblick/tsconfig": "1.0.0",
     "@types/jest": "29.5.14",
     "@types/ncp": "2.0.8",
     "@types/node": "22.9.0",
@@ -58,6 +58,7 @@
     "typescript-eslint": "8.15.0"
   },
   "dependencies": {
+    "@lichtblick/suite": "1.8.0",
     "clean-webpack-plugin": "4.0.0",
     "commander": "12.1.0",
     "jszip": "3.10.1",
