@@ -1,6 +1,6 @@
 {
   "name": "panel-settings",
-  "displayName": "Foxglove Panel Settings Example",
+  "displayName": "Lichtblick Panel Settings Example",
   "description": "This is an example of the use of the settings api in an extension panel.",
   "publisher": "foxglove",
   "homepage": "",

@@ -1,9 +1,9 @@
 {
   "name": "monaco-editor-example",
-  "displayName": "Foxglove Monaco Editor Example",
-  "description": "Example of embedding the Monoco editor in a Foxglove extension panel.",
-  "publisher": "Foxglove",
-  "homepage": "https://foxglove.dev",
+  "displayName": "Lichtblick Monaco Editor Example",
+  "description": "Example of embedding the Monoco editor in a Lichtblick extension panel.",
+  "publisher": "Lichtblick",
+  "homepage": "https://github.com/lichtblick-suite",
   "version": "1.0.0",
   "license": "MIT",
   "main": "./dist/extension.js",

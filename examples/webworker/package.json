@@ -1,8 +1,8 @@
 {
   "name": "foxglove-example-webworker-extension-panel",
-  "displayName": "Foxglove Example Webworker Extension Panel",
+  "displayName": "Lichtblick Example Webworker Extension Panel",
   "description": "",
-  "publisher": "Foxglove",
+  "publisher": "Lichtblick",
   "version": "1.1.0",
   "license": "MIT",
   "main": "./dist/extension.js",

@@ -51,7 +51,7 @@ export async function createCommand(options: CreateOptions): Promise<void> {
 
   await installDependencies(extensionDir, DEPENDENCIES);
 
-  info(`Created Foxglove extension "${name}" at ${extensionDir}`);
+  info(`Created Lichtblick extension "${name}" at ${extensionDir}`);
 }
 
 async function exists(filename: string): Promise<boolean> {

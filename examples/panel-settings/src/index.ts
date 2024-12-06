@@ -4,7 +4,7 @@ import { initExamplePanel } from "./ExamplePanel";
 
 export function activate(extensionContext: ExtensionContext): void {
   extensionContext.registerPanel({
-    name: "Foxglove Panel Settings Example",
+    name: "Lichtblick Panel Settings Example",
     initPanel: initExamplePanel,
   });
 }

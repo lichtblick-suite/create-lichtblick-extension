@@ -5,7 +5,7 @@ import { createCommand } from "..";
 
 program
   .description(
-    "Creates a new Foxglove extension. Docs: https://docs.foxglove.dev/docs/visualization/extensions/introduction",
+    "Creates a new Lichtblick extension.",
   )
   .showHelpAfterError()
   .argument("<name>", "Name for the new extension")
