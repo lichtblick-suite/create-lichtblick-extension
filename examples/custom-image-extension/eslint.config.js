@@ -1,12 +1,14 @@
 // @ts-check
 
-const foxglove = require("@lichtblick/eslint-plugin");
+const lichtblick = require("@lichtblick/eslint-plugin");
 const globals = require("globals");
 const tseslint = require("typescript-eslint");
 
+lichtblick.configs.base
+
 module.exports = tseslint.config({
   files: ["src/**/*.ts", "src/**/*.tsx"],
-  extends: [foxglove.configs.base, foxglove.configs.react, foxglove.configs.typescript],
+  extends: [lichtblick.configs.base, lichtblick.configs.react, lichtblick.configs.typescript],
   languageOptions: {
     globals: {
       ...globals.es2020,
