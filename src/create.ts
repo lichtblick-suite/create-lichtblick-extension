@@ -8,12 +8,12 @@ import sanitize from "sanitize-filename";
 import { info } from "./log";
 
 const DEPENDENCIES = [
-  "@foxglove/eslint-plugin@^2",
+  "@lichtblick/eslint-plugin@^1",
   "@lichtblick/suite@^1",
   "@types/react@^18",
   "@types/react-dom@^18",
-  "create-foxglove-extension@^1",
-  "eslint@^9",
+  "create-lichtblick-extension@^1",
+  "eslint@^8",
   "prettier@^3",
   "react@^18",
   "react-dom@^18",
