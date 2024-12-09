@@ -1,10 +1,8 @@
 import { spawn } from "child_process";
-import { createHash } from "crypto";
 import { createReadStream, createWriteStream } from "fs";
 import { mkdir, readFile, readdir, stat } from "fs/promises";
 import JSZip from "jszip";
 import ncp from "ncp";
-import fetch from "node-fetch";
 import { homedir } from "os";
 import { join, normalize, relative, sep } from "path";
 import { rimraf } from "rimraf";
@@ -133,7 +131,7 @@ async function prepublish(extensionPath: string, pkg: PackageManifest): Promise<
       if (code === 0) {
         resolve();
       } else {
-        reject(new Error(`${tool} failed with exit code ${code ?? "<null>"}`));
+        reject(new Error(`${tool} failed with exit code ${String(code ?? "<null>")}`));
       }
     });
     child.on("error", reject);
@@ -296,25 +294,4 @@ function inDirectory(directory: string, pathname: string): boolean {
   const relPath = relative(directory, pathname);
   const parts = relPath.split(sep);
   return parts[0] !== "..";
-}
-
-async function githubRawFile(homepage: string, filename: string): Promise<string | undefined> {
-  const match = /^https:\/\/github\.com\/([^/]+)\/([^/?]+)$/.exec(homepage);
-  if (match == undefined) {
-    return undefined;
-  }
-
-  const [_, org, project] = match;
-  if (org == undefined || project == undefined) {
-    return undefined;
-  }
-
-  const url = `https://raw.githubusercontent.com/${org}/${project}/main/${filename}`;
-  try {
-    const res = await fetch(url);
-    const content = await res.text();
-    return content.length > 0 ? url : undefined;
-  } catch {
-    return undefined;
-  }
 }
