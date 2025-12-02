@@ -1,0 +1,34 @@
+{
+  "name": "setter",
+  "displayName": "setter",
+  "description": "",
+  "publisher": "with-vars",
+  "homepage": "",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "main": "./dist/extension.js",
+  "keywords": [],
+  "scripts": {
+    "build": "lichtblick-extension build",
+    "lichtblick:prepublish": "lichtblick-extension build --mode production",
+    "lint": "eslint .",
+    "lint:ci": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "local-install": "lichtblick-extension install",
+    "package": "lichtblick-extension package",
+    "pretest": "lichtblick-extension pretest"
+  },
+  "devDependencies": {
+    "@foxglove/schemas": "1.6.4",
+    "@lichtblick/eslint-plugin": "1.0.4",
+    "@lichtblick/suite": "file:<your-path>/lichtblick/packages/suite",
+    "@types/react": "18.3.27",
+    "@types/react-dom": "18.3.7",
+    "create-lichtblick-extension": "1.0.0",
+    "eslint": "8.57.1",
+    "prettier": "3.6.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.9.3"
+  }
+}
