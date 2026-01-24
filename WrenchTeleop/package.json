@@ -1,0 +1,33 @@
+{
+  "name": "WrenchTeleop",
+  "displayName": "WrenchTeleop",
+  "description": "Panel for wrench teleop",
+  "publisher": "Krishna Garcha",
+  "homepage": "",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "main": "./dist/extension.js",
+  "keywords": [],
+  "scripts": {
+    "build": "lichtblick-extension build",
+    "lichtblick:prepublish": "lichtblick-extension build --mode production",
+    "lint": "eslint .",
+    "lint:ci": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "local-install": "lichtblick-extension install",
+    "package": "lichtblick-extension package",
+    "pretest": "lichtblick-extension pretest"
+  },
+  "devDependencies": {
+    "@lichtblick/eslint-plugin": "1.0.4",
+    "@lichtblick/suite": "1.22.1",
+    "@types/react": "18.3.27",
+    "@types/react-dom": "18.3.7",
+    "create-lichtblick-extension": "1.0.0",
+    "eslint": "8.57.1",
+    "prettier": "3.8.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.9.3"
+  }
+}
