@@ -894,13 +894,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lichtblick/suite@npm:1.8.0":
-  version: 1.8.0
-  resolution: "@lichtblick/suite@npm:1.8.0"
-  checksum: 10c0/2031f9df7142f3ed6948529268f3f8784975cc62a1344a8d65d17b63a3f76513351addadc9e8e8323adcc7eaad9da78aab6f7b3cb82121cfc7062c86815e8f55
-  languageName: node
-  linkType: hard
-
 "@lichtblick/tsconfig@npm:1.0.2":
   version: 1.0.2
   resolution: "@lichtblick/tsconfig@npm:1.0.2"
@@ -2356,7 +2349,6 @@ __metadata:
   resolution: "create-lichtblick-extension@workspace:."
   dependencies:
     "@lichtblick/eslint-plugin": "npm:2.0.3"
-    "@lichtblick/suite": "npm:1.8.0"
     "@lichtblick/tsconfig": "npm:1.0.2"
     "@types/jest": "npm:29.5.14"
     "@types/ncp": "npm:2.0.8"

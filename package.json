@@ -58,7 +58,6 @@
     "typescript": "5.6.3"
   },
   "dependencies": {
-    "@lichtblick/suite": "1.8.0",
     "clean-webpack-plugin": "4.0.0",
     "commander": "12.1.0",
     "jszip": "3.10.1",
