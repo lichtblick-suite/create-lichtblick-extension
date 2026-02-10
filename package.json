@@ -1,7 +1,7 @@
 {
   "name": "create-lichtblick-extension",
   "displayName": "Create Lichtblick Extension",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "Lichtblick",
   "description": "Create and package Lichtblick extensions",
   "license": "MIT",
