@@ -10,12 +10,12 @@ using the "@lichtblick/suite" SDK.
 
 ## Creating Your First Extension
 
-Make sure you have [Node.js](https://nodejs.org/) 16 or newer installed. In a terminal, go
+Make sure you have [Node.js](https://nodejs.org/) 18.10 or newer installed. In a terminal, go
 into the directory where you keep source code (ex: `cd ~/Code`) and run the following
 command:
 
 ```sh
-npm init lichtblick-extension@latest helloworld
+yarn init lichtblick-extension@latest helloworld
 ```
 
 Feel free to choose an extension name other than _helloworld_. Otherwise, this will create
@@ -23,7 +23,7 @@ a folder named _helloworld_ containing your extension. Run a one-time initializa
 
 ```sh
 cd helloworld
-npm install
+yarn install
 ```
 
 This installs all of the dependencies needed to edit and build the extension. You can use
@@ -34,7 +34,7 @@ and registering it as a custom panel. To build and install this extension into y
 Lichtblick extensions folder, run:
 
 ```sh
-npm run local-install
+yarn run local-install
 ```
 
 This should create a folder under your home directory such as
@@ -69,13 +69,13 @@ publishing, make sure you have set `name`, `publisher`, `version`, and `descript
 you are ready to distribute your extension, run:
 
 ```sh
-npm run package
+yarn run package
 ```
 
 This will produce a _.foxe_ file such as `helloworld-0.0.0.foxe`. This is essentially a
 ZIP archive containing your extension manifest and compiled code that can be opened by the
 Lichtblick application, which will unpack it and install it to the
-`~/.lichtblick-suite/extensions` folder. 
+`~/.lichtblick-suite/extensions` folder.
 
 ## Examples
 
@@ -90,7 +90,7 @@ Information on developing `create-lichtblick-extension` itself.
 Build the `create-lichtblick-extension` package locally with:
 
 ```bash
-npm pack
+yarn pack
 ```
 
 Run the extension generator:
