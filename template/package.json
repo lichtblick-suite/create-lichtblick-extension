@@ -8,6 +8,12 @@
   "license": "UNLICENSED",
   "main": "./dist/extension.js",
   "keywords": [],
+  "overrides": {
+    "webpack": "5.105.0"
+  },
+  "resolutions": {
+    "webpack": "5.105.0"
+  },
   "scripts": {
     "build": "lichtblick-extension build",
     "lichtblick:prepublish": "lichtblick-extension build --mode production",
