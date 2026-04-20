@@ -15,7 +15,7 @@ into the directory where you keep source code (ex: `cd ~/Code`) and run the foll
 command:
 
 ```sh
-yarn init lichtblick-extension@latest helloworld
+yarn init create-lichtblick-extension@latest helloworld
 ```
 
 Feel free to choose an extension name other than _helloworld_. Otherwise, this will create
