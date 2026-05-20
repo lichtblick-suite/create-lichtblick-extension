@@ -1,4 +1,3 @@
-import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import * as path from "path";
 import type { Configuration } from "webpack";
 
@@ -20,6 +19,7 @@ export default (
       path: path.join(resolvedExtensionPath, "dist"),
       filename: "extension.js",
       libraryTarget: "commonjs2",
+      clean: true,
     },
     // Always use the eval-source-map option so the source map is included in the source file.
     // Because Lichtblick _evals_ the extension script to run it - the source map must be inline with
@@ -66,7 +66,7 @@ export default (
         },
       ],
     },
-    plugins: [new CleanWebpackPlugin()],
+    plugins: [],
   };
 
   return config;

@@ -1,11 +1,10 @@
 import { spawn } from "child_process";
 import { createReadStream, createWriteStream } from "fs";
-import { mkdir, readFile, readdir, stat } from "fs/promises";
+import { mkdir, readFile, readdir, rm, stat } from "fs/promises";
 import JSZip from "jszip";
 import ncp from "ncp";
 import { homedir } from "os";
 import { join, normalize, relative, sep } from "path";
-import { rimraf } from "rimraf";
 import { promisify } from "util";
 
 import { getPackageDirname, getPackageId, parsePackageName } from "./extensions";
@@ -228,7 +227,7 @@ async function install(
 }
 
 async function copyFiles(files: string[], destDir: string): Promise<void> {
-  await rimraf(destDir);
+  await rm(destDir, { recursive: true, force: true });
   await mkdir(destDir, { recursive: true });
 
   info(`Copying files to ${destDir}`);
