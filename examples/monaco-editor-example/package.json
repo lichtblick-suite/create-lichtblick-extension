@@ -18,13 +18,13 @@
     "pretest": "lichtblick-extension pretest"
   },
   "devDependencies": {
-    "@lichtblick/eslint-plugin":"1.0.1",
+    "@lichtblick/eslint-plugin":"2.0.8",
     "@lichtblick/suite": "1.8.0",
     "@monaco-editor/react": "4.4.5",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "create-lichtblick-extension": "1.1.0",
-    "eslint": "8.53.0",
+    "eslint": "10.7.0",
     "prettier": "3.3.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
