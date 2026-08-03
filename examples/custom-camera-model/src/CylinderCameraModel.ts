@@ -23,16 +23,9 @@ export class CylinderCameraModel implements CameraModel {
   public height: number;
 
   public constructor(customCameraInfo: CustomCameraInfo, name: string) {
-    console.log(`[${name}] 🔧 Constructor called`);
     this.name = name;
     const { binning_x, binning_y, roi, distortion_model, D, K, P, R, width, height } =
       customCameraInfo;
-    const fx = K[0];
-    const fy = K[4];
-    this.fx = K[0] ?? 0;
-    this.fy = K[4] ?? 0;
-    this.cx = K[2] ?? 0;
-    this.cy = K[5] ?? 0;
     if (width <= 0 || height <= 0) {
       throw new Error(`Invalid image size ${width}x${height}`);
     }
@@ -42,16 +35,22 @@ export class CylinderCameraModel implements CameraModel {
     if (K.length !== 0 && K.length !== 9) {
       throw new Error(`K.length=${K.length}, expected 9`);
     }
-    if (fx === 0 || fy === 0) {
-      throw new Error(`Invalid focal length (fx=${fx}, fy=${fy})`);
+    // Resolve K (falling back to identity) before deriving fx/fy/cx/cy so the
+    // exposed intrinsics always match the matrix actually used for projection.
+    this.K = K.length === 9 ? K : [1, 0, 0, 0, 1, 0, 0, 0, 1];
+    this.fx = this.K[0] ?? 0;
+    this.fy = this.K[4] ?? 0;
+    this.cx = this.K[2] ?? 0;
+    this.cy = this.K[5] ?? 0;
+    if (this.fx === 0 || this.fy === 0) {
+      throw new Error(`Invalid focal length (fx=${this.fx}, fy=${this.fy})`);
     }
     const D8 = [...D];
     while (D8.length < 8) {
       D8.push(0);
     }
     this.D = D8;
-    this.K = K.length === 9 ? K : [1, 0, 0, 0, 1, 0, 0, 0, 1];
-    this.P = P;
+    this.P = P.length === 12 ? P : [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0];
     this.R = R.length === 9 ? R : [1, 0, 0, 0, 1, 0, 0, 0, 1];
     this.width = width;
     this.height = height;
@@ -65,7 +64,6 @@ export class CylinderCameraModel implements CameraModel {
         "Failed to initialize camera model: unable to handle adjusted binning and adjusted roi camera models.",
       );
     }
-    console.log(`[${name}] ✅ Constructor completed successfully`);
   }
 
   /**
