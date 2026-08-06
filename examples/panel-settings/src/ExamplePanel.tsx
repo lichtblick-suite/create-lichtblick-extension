@@ -109,10 +109,13 @@ function ExamplePanel({ context }: { context: PanelExtensionContext }): ReactEle
     [context],
   );
 
-  // Update the settings editor every time our state or the list of available topics changes.
+  // Persist state to the layout whenever it changes.
   useEffect(() => {
     context.saveState(state);
+  }, [context, state]);
 
+  // Update the settings editor when our state or the list of available topics changes.
+  useEffect(() => {
     const topicOptions = (topics ?? []).map((topic) => ({ value: topic.name, label: topic.name }));
 
     // We set up our settings tree to mirror the shape of our panel state so we
